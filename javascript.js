@@ -65,10 +65,17 @@ function createGrid(size) {
 }
 
 function promptCreate() {
-  let cellsPerSide = prompt("Enter number of cells per side (max 100)");
-  let numberOfCells = cellsPerSide * cellsPerSide; // this isnt in pixels, this is the number of divs and the divs have their own surface area
-  createGrid(numberOfCells);
-  cellsHoveredTotal = 10;
+  let cellsPerSide = prompt("Enter number of cells per side (range: 1-100)");
+  if (cellsPerSide > 0 && cellsPerSide <= 100) {
+    let numberOfCells = cellsPerSide * cellsPerSide; // this isnt in pixels, this is the number of divs and the divs have their own surface area
+    createGrid(numberOfCells);
+    cellsHoveredTotal = 10;
+  }
+
+  else {
+    alert("Please Choose a valid range");
+  }
+
 }
 
 // 3. Add button
