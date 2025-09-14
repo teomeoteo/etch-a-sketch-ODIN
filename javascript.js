@@ -84,4 +84,4 @@ var button = document.createElement("button");
 button.addEventListener('click', promptCreate);
 button.style.cssText = "width: 200px; height: 50px; font-size: 20px;";
 button.textContent = "Create New Grid";
-body.appendChild(button);
+body.prepend(button);
